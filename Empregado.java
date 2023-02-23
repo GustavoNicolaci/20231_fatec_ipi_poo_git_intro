@@ -1,9 +1,20 @@
 public class Empregado{
-    //variavel de instancia (objeto)
-    private String nome;
-    //variavel de instancia (objeto)
-    private int idade;
+    private int tipo;
+    private String nome;        //variavel de instancia (objeto)
+    private int idade;          //variavel de instancia (objeto)
+    private double salario;
+    private double comissao;
+    private double bonus;
 
+    public double calcularSalario(){
+        if (tipo == 0)
+        return salario;
+        if (tipo == 1)
+        return salario + salario * comissao;
+        if (tipo == 2)
+        return salario + bonus;
+        return 0;
+    }
     public String getNome(){    //obter nome
         return nome;            //retornar nome
     }
